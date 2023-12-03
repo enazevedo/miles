@@ -1,0 +1,69 @@
+### default
+1) flash demo 1.3.2:
+
+https://espressif.github.io/esp-launchpad/?flashConfigURL=https://raw.githubusercontent.com/espressif/esp-box/master/launch.toml
+
+2) Disconnect
+
+3) On HA, "New Device". Select serial.
+
+4) wait. around 4 minutes = Party emoticon "Configuration created!"
+
+This is the miles.yaml
+
+esphome:
+  name: miles
+  friendly_name: Miles
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "XXXXXX="
+
+ota:
+  password: "XXXX"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Miles Fallback Hotspot"
+    password: "XXXX"
+
+captive_portal:
+
+
+2) Updated these 3 for
+
+api:
+  encryption:
+    key: !secret ha_api_key
+ota:
+  password: !secret ota
+wifi:
+  ap:
+    ssid: "Miles Fallback Hotspot"
+    password: !secret wifi_fallback
+
+
+
+### Default pinging and online on ESPHome
+
+Fuck, this time pings, without the "use_address"
+
+Fuck my life!
+
+### esphome, originally from here
+# https://github.com/esphome/firmware/blob/main/voice-assistant/esp32-s3-box-3.yaml
+
+# adapted a few lines (esp32>board || ota || wifi || api)
