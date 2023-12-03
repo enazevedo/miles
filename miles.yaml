@@ -1,4 +1,3 @@
-
 esphome:
   name: miles
   friendly_name: Miles
@@ -262,36 +261,36 @@ globals:
 image:
   # Standard path IDLE > LISTENING > THINKING > REPLYING
   # original path on file: https://github.com/esphome/firmware/raw/main/voice-assistant/casita/*
-  - file: https://github.com/enazevedo/miles/blob/main/Idle@2x.png
+  - file: https://raw.githubusercontent.com/enazevedo/miles/main/Idle@2x.png
     id: casita_idle
     resize: 200x200
     type: RGB24
     use_transparency: true
-  - file: https://github.com/enazevedo/miles/blob/main/Normal@2x.png
+  - file: https://raw.githubusercontent.com/enazevedo/miles/main/Normal@2x.png
     id: casita_listening
     resize: 200x200
     type: RGB24
     use_transparency: true
-  - file: https://github.com/enazevedo/miles/blob/main/Focusing@2x.png
+  - file: https://raw.githubusercontent.com/enazevedo/miles/main/Focusing@2x.png
     id: casita_thinking
     resize: 200x200
     type: RGB24
     use_transparency: true
-  - file: https://github.com/enazevedo/miles/blob/main/Happy@2x.png
+  - file: https://raw.githubusercontent.com/enazevedo/miles/main/Happy@2x.png
     id: casita_replying
     resize: 200x200
     type: RGB24
     use_transparency: true
 
   # Error cases (More specific flies to come soon)
-  - file: https://github.com/enazevedo/miles/blob/main/Error@2x.png
+  - file: https://raw.githubusercontent.com/enazevedo/miles/main/Error@2x.png
     id: casita_error
     resize: 200x200
     type: RGB24
     use_transparency: true
 
   # Initialization illustration
-  - file: https://github.com/enazevedo/miles/blob/main/Initializing@2x.png
+  - file: https://raw.githubusercontent.com/enazevedo/miles/main/Initializing@2x.png
     id: casita_initializing
     resize: 200x200
     type: RGB24
@@ -352,4 +351,3 @@ display:
       - id: muted_page
         lambda: |-
           it.fill(Color::BLACK);
-
