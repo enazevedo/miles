@@ -55,15 +55,9 @@ wifi:
     ssid: "Miles Fallback Hotspot"
     password: !secret wifi_fallback
 
-
-
-### Default pinging and online on ESPHome
-
-Fuck, this time pings, without the "use_address"
-
-Fuck my life!
-
 ### esphome, originally from here
 # https://github.com/esphome/firmware/blob/main/voice-assistant/esp32-s3-box-3.yaml
 
 # adapted a few lines (esp32>board || ota || wifi || api)
+
+320 YAML+ BIN not properly aligns on the display, even when removing the "resize 200x200". can't be bothered more for that shit.
